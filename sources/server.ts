@@ -6,7 +6,7 @@ import { root, greetMe, submitMyMessage } from './request-handlers'
 
 const server = Fastify()
 
-server.register(FastifyMultipart, { attachFieldsToBody: true, })
+server.register(FastifyMultipart, { attachFieldsToBody: true })
 server.register(FastifyFormBody)
 
 server.get('/', root)
