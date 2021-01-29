@@ -11,7 +11,7 @@ server.register(FastifyFormBody)
 
 const BASEPATH_PREFIX = '/fastify-typescript-example'
 
-server.get(`${BASEPATH_PREFIX}/`, root)
+server.get(`${BASEPATH_PREFIX}`, root)
 server.get(`${BASEPATH_PREFIX}/greet-me`, greetMe)
 server.post(`${BASEPATH_PREFIX}/submit-my-message`, submitMyMessage)
 
