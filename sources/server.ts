@@ -13,7 +13,7 @@ server.get('/', root)
 server.get('/greet-me', greetMe)
 server.post('/submit-my-message', submitMyMessage)
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 7001
 const BIND_IP_ADDRESS = '0.0.0.0'
 
 server.listen(PORT, BIND_IP_ADDRESS, (error, address) => {
