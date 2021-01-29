@@ -9,9 +9,11 @@ const server = Fastify()
 server.register(FastifyMultipart, { attachFieldsToBody: true })
 server.register(FastifyFormBody)
 
-server.get('/', root)
-server.get('/greet-me', greetMe)
-server.post('/submit-my-message', submitMyMessage)
+const BASEPATH_PREFIX = '/fastify-typescript-example'
+
+server.get(`${BASEPATH_PREFIX}`, root)
+server.get(`${BASEPATH_PREFIX}/greet-me`, greetMe)
+server.post(`${BASEPATH_PREFIX}/submit-my-message`, submitMyMessage)
 
 const PORT = process.env.PORT || 7001
 const BIND_IP_ADDRESS = '0.0.0.0'
